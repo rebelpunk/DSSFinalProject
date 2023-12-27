@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="C:\Users\Admin\Desktop\1\style.css">
+  <title>Results</title>
+</head>
+<body>
+  <!-- Your HTML content goes here -->
+<head>
+    <title>Scratch the data and create a CSV file</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .url-input {
+            margin: 10px;
+        }
+
+        .table-container {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .input-group.url-input {
+        display: flex;
+        flex-direction: row; /* Can chinh cac phan tu theo chieu ngang */
+        align-items: center; /* Căn giữa theo chiều dọc */
+        }
+        
+        .form-group {
+        margin-top: 10px; /* Khoảng cách giữa các phần tử */
+        }
+
+        .btn-primary {
+        margin-left: 10px; /* Khoảng cách giữa nút và ô nhập */
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-5 mb-4">Customer Segmentation Analysic</h1>
+        <form action="/analyze" method="POST" class="mt- 4">
+            <div class="input-group url-input">
+                <input type="text" class="form-control" id="url" name="url" required>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" onclick="event.preventDefault(); scratchData()">Crawl data</button>
+            </form>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="csv_file">Choose file CSV:</label>
+                <input type="file" class="form-control-file" id="csv_file" name="csv_file" accept=".csv"
+                    onchange="displayFileData()" required>
+            </div>
+            <div class="form-group">
+                <label for="columnSelector">Select Column:</label>
+                <select class="form-control" id="columnSelector" name="column_name" required> 
+                </select>
+                <p id="selectedColumnName"></p>
+            </div>
+            <a href ="contactme.html" >
+                <h2>Analyze</h2></a>
+           
+        </form>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Customer Segmentation</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <style>
+        canvas {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+</html>
